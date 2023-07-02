@@ -35,4 +35,20 @@ public class IntegerTest {
         assertThat(Math.divideExact(THREE, ONE)).isEqualTo(THREE);
         assertThatThrownBy(() -> Math.divideExact(TWO, ZERO.intValue())).isInstanceOf(ArithmeticException.class);
     }
+
+    @Test
+    public void increment() {
+        int increment = ONE;
+        assertThat(increment++).isEqualTo(ONE);
+        assertThat(increment).isEqualTo(TWO);
+        assertThat(++increment).isEqualTo(THREE);
+    }
+
+    @Test
+    public void decrement() {
+        int decrement = THREE;
+        assertThat(decrement--).isEqualTo(THREE);
+        assertThat(decrement).isEqualTo(TWO);
+        assertThat(--decrement).isEqualTo(ONE);
+    }
 }
