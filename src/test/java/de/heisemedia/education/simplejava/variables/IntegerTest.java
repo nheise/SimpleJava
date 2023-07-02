@@ -37,6 +37,13 @@ public class IntegerTest {
     }
 
     @Test
+    public void comparing() {
+        assertThat(ONE == ONE).isTrue();
+        assertThat(ONE == TWO).isFalse();
+        assertThat(ONE != THREE).isTrue();
+    }
+
+    @Test
     public void increment() {
         int increment = ONE;
         assertThat(increment++).isEqualTo(ONE);

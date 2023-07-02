@@ -17,6 +17,15 @@ public class StringTest {
     }
 
     @Test
+    public void comparing() {
+        final String a = "a";
+        final String anOtherA = "a";
+        // Don't use "==", instead use equals()
+        assertThat(a == anOtherA).isTrue();
+        assertThat(a.equals(anOtherA)).isTrue();
+    }
+
+    @Test
     public void connectingStrings() {
         final String part1 = "part 1";
         final String part2 = "part 2";
